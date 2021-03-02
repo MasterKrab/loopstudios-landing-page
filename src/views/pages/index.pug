@@ -25,6 +25,8 @@ html(lang="en")
       meta(name="theme-color", content="#ffffff")
       //- CSS
       link(rel="stylesheet", href="css/styles.css")
+      //- Fontawesome
+      link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu", crossorigin="anonymous")
    body
       header.main-header 
          .top-bar
@@ -91,4 +93,37 @@ html(lang="en")
                   picture
                      source(srcset="assets/img/desktop/image-fisheye.jpg", media="(min-width: 768px)")
                      img.card__image(src="assets/img/mobile/image-fisheye.jpg", alt="night arcade")
+      footer.footer 
+         img.footer__logo(src="assets/img/logo.svg", alt="loopstudios logo")
+         nav.footer-menu 
+               ul.footer-menu__list 
+                  li.footer-menu__item 
+                     a.footer-menu__link About
+                  li.footer-menu__item 
+                     a.footer-menu__link Careers
+                  li.footer-menu__item 
+                     a.footer-menu__link Events
+                  li.footer-menu__item 
+                     a.footer-menu__link Products
+                  li.footer-menu__item 
+                     a.footer-menu__link Support
+         ul.footer-social
+            li.footer-social__item
+               a.footer-social__link
+                i.footer-social__icon.fab.fa-facebook
+                span.footer-social__name Go to Loopstudios's facebook
+            li.footer-social__item
+               a.footer-social__link
+                i.footer-social__icon.fab.fa-twitter
+                span.footer-social__name Go to Loopstudios's twitter
+            li.footer-social__item
+               a.footer-social__link
+                i.footer-social__icon.fab.fa-pinterest
+                span.footer-social__name Go to Loopstudios's pinterest
+            li.footer-social__item
+               a.footer-social__link
+                i.footer-social__icon.fab.fa-instagram
+                span.footer-social__name Go to Loopstudios's instagram
+         p.footer__text © 2021 Loopstudios. All rights reserved.
+
                   
