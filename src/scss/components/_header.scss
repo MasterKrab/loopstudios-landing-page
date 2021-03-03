@@ -1,0 +1,163 @@
+@use "../variables/colors" as c;
+@use "../mixins/bottom-bar" as *;
+
+.main-header{
+   background-image: url(../assets/img/mobile/image-hero.jpg);
+   background-repeat: no-repeat;
+   padding: 2.5rem 1.6rem;
+   min-height: 500px;
+   display: grid;
+   grid-template-columns: 1fr;
+   position: relative;
+
+   @media screen and (min-width: 768px){
+      background-image: url(../assets/img/desktop/image-hero.jpg);
+   }
+
+   @media screen and (min-width: 1450px){
+      background-size: cover;
+   }
+
+   &__titles, &__top{
+      width: 100%;
+      max-width: 1200px;
+   }
+
+   &__titles{
+      margin: auto;
+   }
+
+   &__title{
+      font-family: "Josefin Sans", sans-serif;
+      font-weight: 300;
+      color: c.$white;
+      border: 2px solid c.$white;
+      font-size: 2.3rem;
+      text-transform: uppercase;
+      max-width: 600px;
+      padding: 1rem 1.5rem;
+      
+      @media screen and (min-width: 400px) {
+         font-size: 3rem;
+      }
+
+      @media screen and (min-width: 850px) {
+         font-size: 4.5rem;
+      }
+   }
+
+   &__top{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;   
+      margin-left: auto;
+      margin-right: auto;
+   }
+
+}
+
+.top-bar{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   position: relative;
+   z-index: 100;   
+   width: 100%;
+
+   &__button{
+      width: 30px;
+      height: 20px;
+      display: grid;
+      place-items: center;
+   }
+
+   &__icon{
+      display: block;
+      background: c.$white;
+      width: 30px;
+      height: 3px;
+      border-radius: 15px;
+      position: relative;
+      margin-left: auto;
+      transition: transform .3s;
+
+      @media screen and (min-width: 850px){
+         display: none;
+      }
+      
+      &::after, &::before{
+         content: "";
+         background: c.$white;
+         width: 30px;
+         height: 3px;
+         border-radius: 15px;
+         position: absolute;
+         left: 0;
+         top: -8px;
+         transition: transform .3s, opacity .2s;
+      }
+      
+      &::before{
+         top: 8px;
+      }
+
+      &--active{
+         transform: rotate(45deg);
+
+         &::after{
+            opacity: 0;
+         }
+
+         &::before{
+            transform: rotate(90deg) translateX(-7px);
+         }
+      }
+   }
+}
+
+.menu{
+   @media screen and (max-width: 850px){
+      display: none;
+      background-color: c.$black;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 10;
+   }
+   
+   &--active{
+      animation: show .3s 1;
+      display: flex;
+   }
+
+   &__list{
+      font-family: "Josefin Sans", sans-serif;
+      font-weight: 300;
+      font-size: 1.5rem;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1.5rem;
+
+      @media screen and (max-width: 850px){
+         height: 100%;
+         color: c.$very-dark-gray;
+         text-transform: uppercase;
+      }
+
+      @media screen and (min-width: 850px){
+         flex-direction: row;
+         padding: 3rem 2rem;
+         color: c.$white;
+      }
+   }
+
+   &__link{
+      cursor: pointer;
+   }
+
+   @include bottom-bar;
+}

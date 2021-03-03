@@ -27,10 +27,17 @@ html(lang="en")
       link(rel="stylesheet", href="css/styles.css")
       //- Fontawesome
       link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu", crossorigin="anonymous")
+      //- Fonts
+      link(rel="preconnect", href="https://fonts.gstatic.com")
+      //- Josefin San - Alata
+      link(href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap", rel="stylesheet")
    body
       header.main-header 
-         .top-bar
-            img.top-bar__logo(src="assets/img/logo.svg", alt="loopstudios logo")
+         .main-header__top
+            .top-bar
+               img.top-bar__logo(src="assets/img/logo.svg", alt="loopstudios logo")
+               .top-bar__button#menu-button
+                  span.top-bar__icon
             nav.menu#menu 
                ul.menu__list 
                   li.menu__item 
@@ -43,56 +50,88 @@ html(lang="en")
                      a.menu__link Products
                   li.menu__item 
                      a.menu__link Support
-         h1.main-header__title Immersive experiences that deliver
+         .main-header__titles
+            h1.main-header__title Immersive experiences that deliver
       main.main 
          article.info 
-            .info__illustration
+            figure
+               picture
+                  source(srcset="assets/img/desktop/image-interactive.jpg", media="(min-width: 900px)")
+                  img.info__illustration(src="assets/img/mobile/image-interactive.jpg", alt="Man with vr")
             .info__card
-               h2.info__title The leader in interactive VR
+               h2.info__title 
+                  |The leader in 
+                  br
+                  |interactive VR
                p.info__text Founded in 2011, Loopstudios has been producing world-class virtual reality projects for some of the best companies around the globe. Our award-winning creations have transformed businesses through digital experiences that bind to their brand.
          article.gallery
-            h2.galley__title Our creations
+            h2.gallery__title Our creations
             .gallery__images
                article.card 
-                  h3.card__title Deep earth
+                  h3.card__title 
+                     |Deep 
+                     br
+                     |earth
                   picture
                      source(srcset="assets/img/desktop/image-deep-earth.jpg", media="(min-width: 768px)")
                      img.card__image(src="assets/img/mobile/image-deep-earth.jpg", alt="deep earth")
                article.card 
-                  h3.card__title Night arcade
+                  h3.card__title
+                     |Night
+                     br
+                     |arcade
                   picture
                      source(srcset="assets/img/desktop/image-night-arcade.jpg", media="(min-width: 768px)")
                      img.card__image(src="assets/img/mobile/image-night-arcade.jpg", alt="night arcade")
                article.card 
-                  h3.card__title Soccer team VR
+                  h3.card__title 
+                     |Soccer
+                     br 
+                     |team VR
                   picture
                      source(srcset="assets/img/desktop/image-soccer-team.jpg", media="(min-width: 768px)")
                      img.card__image(src="assets/img/mobile/image-soccer-team.jpg", alt="night arcade")
                article.card 
-                  h3.card__title The grid
+                  h3.card__title 
+                     |The 
+                     br
+                     |grid
                   picture
                      source(srcset="assets/img/desktop/image-grid.jpg", media="(min-width: 768px)")
                      img.card__image(src="assets/img/mobile/image-grid.jpg", alt="night arcade")
                article.card 
-                  h3.card__title From up above VR
+                  h3.card__title 
+                     |From up 
+                     br
+                     |above VR
                   picture
                      source(srcset="assets/img/desktop/image-from-above.jpg", media="(min-width: 768px)")
                      img.card__image(src="assets/img/mobile/image-from-above.jpg", alt="night arcade")
                article.card 
-                  h3.card__title Pocket borealis
+                  h3.card__title 
+                     |Pocket
+                     br
+                     |borealis
                   picture
                      source(srcset="assets/img/desktop/image-pocket-borealis.jpg", media="(min-width: 768px)")
                      img.card__image(src="assets/img/mobile/image-pocket-borealis.jpg", alt="night arcade")
                article.card 
-                  h3.card__title The curiosity
+                  h3.card__title 
+                     |The 
+                     br
+                     |curiosity
                   picture
                      source(srcset="assets/img/desktop/image-curiosity.jpg", media="(min-width: 768px)")
                      img.card__image(src="assets/img/mobile/image-curiosity.jpg", alt="night arcade")
                article.card 
-                  h3.card__title Make it fisheye
+                  h3.card__title
+                     |Make it 
+                     br
+                     |fisheye
                   picture
                      source(srcset="assets/img/desktop/image-fisheye.jpg", media="(min-width: 768px)")
                      img.card__image(src="assets/img/mobile/image-fisheye.jpg", alt="night arcade")
+            a.gallery__link(href="#") See all
       footer.footer 
          img.footer__logo(src="assets/img/logo.svg", alt="loopstudios logo")
          nav.footer-menu 
@@ -110,20 +149,20 @@ html(lang="en")
          ul.footer-social
             li.footer-social__item
                a.footer-social__link
-                i.footer-social__icon.fab.fa-facebook
-                span.footer-social__name Go to Loopstudios's facebook
+                i.footer-social__icon.fab.fa-facebook-square
+                span.footer-social__name  Go to Loopstudios's facebook
             li.footer-social__item
                a.footer-social__link
                 i.footer-social__icon.fab.fa-twitter
-                span.footer-social__name Go to Loopstudios's twitter
+                span.footer-social__name  Go to Loopstudios's twitter
             li.footer-social__item
                a.footer-social__link
                 i.footer-social__icon.fab.fa-pinterest
-                span.footer-social__name Go to Loopstudios's pinterest
+                span.footer-social__name  Go to Loopstudios's pinterest
             li.footer-social__item
                a.footer-social__link
                 i.footer-social__icon.fab.fa-instagram
-                span.footer-social__name Go to Loopstudios's instagram
+                span.footer-social__name  Go to Loopstudios's instagram
          p.footer__text © 2021 Loopstudios. All rights reserved.
-
+      script(src="js/scripts-min.js") 
                   

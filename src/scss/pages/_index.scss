@@ -1,0 +1,23 @@
+html{
+   font-family: "Josefin Sans", sans-serif;
+   font-size: 15px;
+}
+
+body{
+   // max-width: 1440px;
+   margin: 0 auto;
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+}
+
+@media screen and (max-width: 768px){
+   .no-scroll{
+      height: 100vh;
+      overflow: hidden;
+   }
+}
+
+.main{
+   padding: 100px 1.5rem;
+}
