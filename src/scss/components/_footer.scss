@@ -55,6 +55,10 @@
       }
    }  
 
+   &__link{
+      cursor: pointer;
+   }
+
    @include bottom-bar;
 }
 
@@ -73,6 +77,10 @@
    
    &__item{
       height: max-content;
+   }
+
+   &__link{
+      cursor: pointer;
    }
 
    &__name{
