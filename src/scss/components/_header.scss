@@ -4,18 +4,15 @@
 .main-header{
    background-image: url(../assets/img/mobile/image-hero.jpg);
    background-repeat: no-repeat;
+   background-size: cover;
    padding: 2.5rem 1.6rem;
-   min-height: 500px;
+   min-height: 600px;
    display: grid;
    grid-template-columns: 1fr;
    position: relative;
 
    @media screen and (min-width: 768px){
       background-image: url(../assets/img/desktop/image-hero.jpg);
-   }
-
-   @media screen and (min-width: 1450px){
-      background-size: cover;
    }
 
    &__titles, &__top{
